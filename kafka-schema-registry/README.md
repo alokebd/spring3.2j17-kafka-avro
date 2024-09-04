@@ -1,11 +1,11 @@
-### Spring Boot Kafka Avro Proucer & Conusmer with Schema Registry
+### Spring Boot Kafka Avro Producer & Consumer with Schema Registry
 - Serialization and Deserialization (SerDes) in Kafka Streams wehre Avro is an open source data serialization, and processing frameworks. It helps define a binary format for our data, as well as map it to the programming language of our choice (i.e. JSON mapping).
 - One of the critical features of Avro is the ability to define a schema for our data. 
 - Schema Registry is a centralized service that manages and stores schemas for data exchanged in Apache Kafka. It provides a repository for storing and retrieving Avro, JSON Schema, or Protobuf schemas used for serializing and deserializing data in Kafka.
 ![SchemaRegistry](SchemaRegistry.PNG)
 
 
-#(a). Docker Composer (check docker file)
+## (a). Docker Composer (check docker file)
 * Run Docker (Docker Desktop version) 
 * Go to terminal (to the application directory where the docker comple file, docker-compose.yml) as below:
 - docker compose up -d
@@ -19,7 +19,7 @@
 
 
 
-#(b). Alternatively Run Kafka Service locally as below:
+## (b). Alternatively Run Kafka Service locally as below:
 - Kafka Servers Start (local: eg. C:\kafka_2.13-3.7.0)
 *1) .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 *2) .\bin\windows\kafka-server-start.bat .\config\server.properties
@@ -30,16 +30,18 @@
 - Conduktor Configure the desktop connection (Cluster Name: local, Bootstrap Server: localhost:9092, Zookeeper: localhost:2123), test the connect and save
 ![Conductor-Kafa-UI](Conductor-Kafa-UI.png)
 
-## Call (from Postman) Rest API
+## Call (from Postman) Rest API (added postman collection)
 - http://localhost:8181/events with following data
 
-``` {
+``` 
+{
     "id": 101,
     "firstName": "Aloke",
     "middleName": "Kumar",
     "lastName": "Das",
     "emailId": "alokebd@gmail.com"
-}```
+}
+```
 
 
 
