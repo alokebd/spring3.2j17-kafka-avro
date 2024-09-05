@@ -4,6 +4,26 @@
 - Schema Registry is a centralized service that manages and stores schemas for data exchanged in Apache Kafka. It provides a repository for storing and retrieving Avro, JSON Schema, or Protobuf schemas used for serializing and deserializing data in Kafka.
 ![SchemaRegistry](SchemaRegistry.PNG)
 
+## About the Demo project
+- The demo project has Employee Avro shcema that creates Employee object by Maven tool. 
+- The Rest API tiggers the envent to produce employee. The Kafka Producer and Consumer verify the schema from the Schema Registory.
+- The SerDes
+![Avro-SerDes](Avro-SerDes.PNG)
+- Emplyee Schema 
+![AvroSchema](AvroSchema.PNG)
+
+## Prerequisites
+- Spring Boot (3.2)
+- Maven 
+- Java (17)
+- Libraries:
+  * starter-web 
+  * kafka
+  * H2
+  * lombok/logback
+  * Avro
+  * schema Registry
+  * confluent
 
 ## (a). Docker Composer (check docker file)
 * Run Docker (Docker Desktop version) 
