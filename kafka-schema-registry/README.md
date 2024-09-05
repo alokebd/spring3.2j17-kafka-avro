@@ -19,10 +19,9 @@
 - Libraries:
   * starter-web 
   * kafka
-  * H2
   * lombok/logback
   * Avro
-  * schema Registry
+  * schema-registry
   * confluent
 
 ## (a). Docker Composer (check docker file)
